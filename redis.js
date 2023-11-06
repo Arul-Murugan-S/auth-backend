@@ -5,8 +5,7 @@ dotenv.config();
 
 const redisClient = () => {
     return redis.createClient({
-      url: process.env.redis_URL,       // for local, host: "local host", port: 6379, 
-                                        // or leave it blank as redis.createClient()
+      url: process.env.redis_URL,                                           
     });
 }
 
@@ -32,17 +31,6 @@ client.on('SIGQUIT', () => {
     client.quit()
 });
 
-module.exports = client;
-
-// __________________________________________________________________________________
-// const client = redis.createClient();
-   
-// (async () => {
-//     await client.connect();
-// })();
-
-// client.on('connect', () => console.log('Redis Client Connected'));
-// client.on('error', (err) => console.log('Redis Client Connection Error', err));
-// ___________________________________________________________________________________
+module.exports = client
 
 
