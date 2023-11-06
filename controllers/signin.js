@@ -22,7 +22,7 @@ async function InsertVerifyUser(name, email, password) {
             token: token
         });
 
-        const activationLink = `http://localhost:4000/signin/${token}`;
+        const activationLink = `https://auth-backend-fytz.onrender.com/signin/${token}`;     // for local,   `http://localhost:4000/signin/${token}`;
         const content = `<h4> hi, there </h4>
         <h4>You are Welcome to the app</h4>
         <p>Thank you for signing up click on the below link to activate your account</p>
