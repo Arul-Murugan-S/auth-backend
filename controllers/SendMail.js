@@ -28,5 +28,4 @@ function sendMail(toEmail, subject, content) {
     });
 }
 
-
 module.exports = { sendMail }
